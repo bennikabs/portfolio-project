@@ -4,11 +4,12 @@
   --default-font-family: "Poppins", sans-serif;
   --secondary-color: #f9f7fe;
 }
-a:hover {
-  color: black !important;
+div .btn-branding,
+.btn-branding-outline:hover {
+  color: black;
 }
 body {
-  font-family: var(--default-font-family);
+  font-family: var(--default-font-family) !important;
 }
 
 h1,
@@ -21,16 +22,8 @@ h6 {
   font-weight: bold;
   color: #000;
 }
-h1 {
-  font-size: 96px !important;
-  line-height: 2;
-}
-h2 {
-  font-size: 64px !important;
-}
+
 p {
-  font-weight: normal;
-  font-size: 16px;
   line-height: 30px;
 }
 .hero {
@@ -38,52 +31,76 @@ p {
   text-align: center;
   padding: 160px 20px;
 }
+.hero h1 {
+  font-size: 96px;
+  line-height: 1.5;
+}
+.hero h2 {
+  color: #272142;
+  font-family: var(--heading-font-family);
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 2;
+}
 .hero p {
   margin: 0;
   font-weight: bold;
   font-size: 36px;
   color: #272142;
 }
-.hero h2 {
-  color: #272142;
-  font-family: var(--heading-font-family) !important;
-  font-weight: normal;
-  font-size: 24px !important;
-  line-height: 2;
+.project-description h2 {
+  font-size: 64px;
 }
 
-.btn-branding {
-  background-color: var(--branding-color) !important;
+div .btn-branding,
+div .btn-branding:hover {
+  background-color: var(--branding-color);
   border-radius: 4px;
-  color: #fff !important;
   font-size: 18px;
   line-height: 27px;
-  padding: 15px 30px !important;
+  padding: 15px 30px;
+}
+div .btn-branding {
+  color: white;
 }
 .btn-branding-outline {
   border-radius: 4px;
-  border: 1px solid var(--branding-color) !important;
-  color: var(--branding-color) !important;
-  font-size: 18px;
-  line-height: 27px;
+  border: 1px solid var(--branding-color) !important ;
+  color: var(--branding-color) !important ;
+  font-size: 18px !important ;
+  line-height: 27px !important ;
   padding: 15px 30px !important;
 }
 .project-description {
-  padding: 120px 60px !important;
+  padding: 120px 60px;
 }
 @media (max-width: 900px) {
-  h1 {
-    font-size: 44px !important;
+  .hero h1 {
+    font-size: 44px;
     line-height: 2;
+    font-weight: bold;
   }
-  h2 {
-    font-size: 44px !important;
+  .hero h2 {
+    font-size: 24px !important;
+    line-height: 1.5;
+  }
+  .project-description h2 {
+    font-size: 44px;
+    margin-top: 0px;
+    margin-bottom: 30px !important;
+  }
+  p {
+    margin-top: 40px;
+    margin-bottom: 1px;
   }
   .hero {
     padding: 80px 20px;
   }
   .project-description {
     text-align: center;
-    padding: 0;
+    padding: 0px;
+  }
+  .btn-branding-outline {
+    margin-bottom: 60px;
   }
 }
