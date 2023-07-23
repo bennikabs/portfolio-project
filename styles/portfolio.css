@@ -6,6 +6,9 @@ font-family: 'Poppins', sans-serif;*/
   --default-font-family: "Poppins", sans-serif;
   --secondary-color: #f9f7fe;
 }
+a:hover {
+  color: black !important;
+}
 body {
   font-family: var(--default-font-family);
 }
