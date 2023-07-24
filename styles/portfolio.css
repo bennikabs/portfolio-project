@@ -104,3 +104,14 @@ div .btn-branding {
     margin-bottom: 60px;
   }
 }
+.benny {
+  max-width: 400px;
+}
+.about-section h1 {
+  font-size: 64px;
+  line-height: 80px;
+}
+.about-seccton p {
+  font-size: 18px;
+  font-family: var(--default-font-family);
+}
