@@ -3,6 +3,7 @@
   --heading-font-family: "Playfair Display", serif;
   --default-font-family: "Poppins", sans-serif;
   --secondary-color: #f9f7fe;
+  --accent-color: white;
   --pop-font-size: 44px;
   --zeil-line-height: 56px;
 }
@@ -63,7 +64,7 @@ div .btn-branding:hover {
   padding: 15px 30px;
 }
 div .btn-branding {
-  color: white;
+  color: var(--accent-color);
 }
 .btn-branding-outline {
   border-radius: 4px;
@@ -135,7 +136,7 @@ div .btn-branding {
 .btn-branding {
   background: var(--branding-color);
   border-radius: 4px;
-  color: white;
+  color: var(--accent-color);
   font-size: 18px;
   line-height: 27px;
   padding: 15px 30px;
