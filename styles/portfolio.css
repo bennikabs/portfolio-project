@@ -3,6 +3,8 @@
   --heading-font-family: "Playfair Display", serif;
   --default-font-family: "Poppins", sans-serif;
   --secondary-color: #f9f7fe;
+  --pop-font-size: 44px;
+  --zeil-line-height: 56px;
 }
 div .btn-branding,
 .btn-branding-outline:hover {
@@ -74,10 +76,10 @@ div .btn-branding {
 .project-description {
   padding: 120px 60px;
 }
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
   .hero h1 {
     font-size: 44px;
-    line-height: 2;
+    line-height: var(--zeil-line-height);
     font-weight: bold;
   }
   .hero h2 {
@@ -85,9 +87,13 @@ div .btn-branding {
     line-height: 1.5;
   }
   .project-description h2 {
-    font-size: 44px;
+    font-size: var(--pop-font-size);
     margin-top: 0px;
     margin-bottom: 30px !important;
+  }
+  .about-section-content h1 {
+    font-size: var(--pop-font-size) !important;
+    line-height: var(--zeil-line-height) !important;
   }
   p {
     margin-top: 40px;
@@ -95,6 +101,13 @@ div .btn-branding {
   }
   .hero {
     padding: 80px 20px;
+  }
+  .about-section {
+    text-align: center;
+    padding: 30px 20px !important;
+  }
+  .benny {
+    margin: 20px 1px;
   }
   .project-description {
     text-align: center;
@@ -104,14 +117,26 @@ div .btn-branding {
     margin-bottom: 60px;
   }
 }
-.benny {
-  max-width: 100px!important;
+
+.about-section {
+  padding: 160px 20px;
+  margin: 30px;
 }
+
 .about-section h1 {
   font-size: 64px;
   line-height: 80px;
 }
-.about-seccton p {
+.about-section h2 {
   font-size: 18px;
   font-family: var(--default-font-family);
+}
+
+.btn-branding {
+  background: var(--branding-color);
+  border-radius: 4px;
+  color: white;
+  font-size: 18px;
+  line-height: 27px;
+  padding: 15px 30px;
 }
