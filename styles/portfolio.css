@@ -32,7 +32,7 @@ p {
 .hero {
   background: var(--secondary-color);
   text-align: center;
-  padding: 160px 20px;
+  padding: 80px 20px;
 }
 .hero h1 {
   font-size: 96px;
@@ -170,9 +170,7 @@ footer .email-link:hover {
     margin-top: 40px;
     margin-bottom: 1px;
   }
-  .hero {
-    padding: 80px 20px;
-  }
+
   .content-container {
     text-align: center;
     padding: 30px 20px !important;
@@ -197,7 +195,7 @@ footer .email-link:hover {
 }
 
 .content-container {
-  padding: 160px 20px;
+  padding: 60px 20px;
   margin: 30px;
 }
 
