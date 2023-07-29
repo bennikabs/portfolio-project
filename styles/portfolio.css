@@ -7,10 +7,31 @@
   --pop-font-size: 44px;
   --zeil-line-height: 56px;
 }
-div .btn-branding,
-.btn-branding-outline:hover {
+
+div .btn-branding:hover {
   color: black;
 }
+.project-description .btn-branding-outline:hover {
+  color: black;
+  border-radius: 4px;
+  border: 1px solid var(--branding-color);
+  font-size: 18px;
+  line-height: 27px;
+  padding: 15px 30px;
+}
+div .btn-branding,
+div .btn-branding:hover {
+  background-color: var(--branding-color);
+  border-radius: 4px;
+  font-size: 18px;
+  line-height: 27px;
+  padding: 15px 30px;
+}
+nav a:hover,
+nav li.active a {
+  color: var(--branding-color);
+}
+
 body {
   font-family: var(--default-font-family) !important;
 }
@@ -29,6 +50,7 @@ h6 {
 p {
   line-height: 30px;
 }
+
 .hero {
   background: var(--secondary-color);
   text-align: center;
@@ -51,14 +73,26 @@ p {
   font-size: 36px;
   color: #272142;
 }
+
+.project-description {
+  padding: 120px 60px;
+}
 .project-description h2 {
   font-size: 64px;
 }
-
-div .btn-branding,
-div .btn-branding:hover {
-  background-color: var(--branding-color);
+.project-description .btn-branding-outline {
   border-radius: 4px;
+  border: 1px solid var(--branding-color);
+  color: var(--branding-color);
+  font-size: 18px;
+  line-height: 27px;
+  padding: 15px 30px;
+}
+
+.btn-branding {
+  background: var(--branding-color);
+  border-radius: 4px;
+  color: var(--accent-color);
   font-size: 18px;
   line-height: 27px;
   padding: 15px 30px;
@@ -66,25 +100,7 @@ div .btn-branding:hover {
 div .btn-branding {
   color: var(--accent-color);
 }
-.btn-branding-outline {
-  border-radius: 4px;
-  border: 1px solid var(--branding-color) !important ;
-  color: var(--branding-color) !important ;
-  font-size: 18px !important ;
-  line-height: 27px !important ;
-  padding: 15px 30px !important;
-}
 
-.project-description {
-  padding: 120px 60px;
-}
-
-.logo {
-  max-height: 40px;
-}
-nav {
-  padding: 20px 0;
-}
 nav ul {
   padding: 0;
   margin: 0;
@@ -99,11 +115,6 @@ nav a {
   text-decoration: none;
   color: #272142;
   transition: all 100ms ease-in-out;
-}
-
-nav a:hover,
-nav li.active a {
-  color: var(--branding-color);
 }
 
 footer {
@@ -146,8 +157,17 @@ footer .email-link {
 footer .email-link:hover {
   color: var(--branding-color);
 }
+.benny {
+  margin: 50px;
+}
 
 @media (max-width: 1000px) {
+  .cube-container {
+    margin-left: 20px;
+    height: 0px;
+    line-height: 0;
+  }
+
   .hero h1 {
     font-size: 44px;
     line-height: var(--zeil-line-height);
@@ -182,8 +202,16 @@ footer .email-link:hover {
     text-align: center;
     padding: 0px;
   }
+
   nav a {
     font-size: 12px;
+  }
+  nav .cube {
+    margin: 0;
+  }
+
+  nav .heading {
+    padding: 3px;
   }
   .btn-branding-outline {
     margin-bottom: 60px;
@@ -216,11 +244,66 @@ footer .email-link:hover {
 .content p {
   font-size: 14px;
 }
-.btn-branding {
-  background: var(--branding-color);
-  border-radius: 4px;
-  color: var(--accent-color);
-  font-size: 18px;
-  line-height: 27px;
-  padding: 15px 30px;
+
+.cube-container {
+  perspective: 1000px;
+}
+.cube {
+  position: relative;
+  width: 10px;
+  height: 10px;
+  transform-style: preserve-3d;
+  transform: rotateX(45deg) rotateY(45deg);
+  animation: rotate 10s infinite linear;
+  margin-left: 40px;
+  padding: 0px;
+}
+
+.face {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  font-size: 80px;
+  text-align: center;
+  line-height: 200px;
+  font-weight: bold;
+}
+
+.cube-link {
+  padding: 5px;
+  margin: 0;
+}
+
+.front {
+  transform: translateZ(10px);
+  background: #9893ff;
+}
+.back {
+  transform: translateZ(-10px) rotateY(180deg);
+  background: #6561af;
+}
+.right {
+  transform: rotateY(90deg) translateZ(10px);
+  background: white;
+}
+.left {
+  transform: rotateY(-90deg) translateZ(10px);
+  background: #f9f7fe;
+}
+.top {
+  transform: rotateX(90deg) translateZ(10px);
+  background: rgb(244, 214, 214);
+}
+.bottom {
+  transform: rotateX(-90deg) translateZ(10px);
+  background: rgb(251, 197, 206);
+}
+@keyframes rotate {
+  from {
+    transform: rotateX(-30deg) rotateY(0);
+  }
+  to {
+    transform: rotateX(-30deg) rotateY(-360deg);
+  }
 }
